@@ -1,18 +1,22 @@
 <!DOCTYPE html>
-
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>According to Plato, a man should marry a woman who is half his age plus 7 years</title>
 </head>
-
 <body>
+    <h1>Marriage Age Calculator</h1>
+    <p>According to Plato, a man should marry a woman who is half his age plus 7 years.</p>
 
-<form method="POST">
-    <input type="text" name="age" placeholder="Enter your age here" value="">
-    <button type="submit">CHECK</button>
-</form>
+    <form method="POST">
+        <label for="age">Enter your age here:</label>
+        <input type="text" id="age" name="age" placeholder="Enter your age here" value="">
+        <button type="submit">CHECK</button>
+    </form>
 
-<p>You need to marry someone who is {{ age }} years old.</p>
+    {% if age is not none %}
+        <p>You need to marry someone who is {{ age }} years old.</p>
+    {% endif %}
 </body>
-
 </html>
